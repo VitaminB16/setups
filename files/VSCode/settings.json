@@ -1,0 +1,231 @@
+{
+    "workbench.tree.indent": 15,
+    "remote.SSH.showLoginTerminal": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.semanticHighlighting.enabled": true,
+    "synthwave84.brightness": 1,
+    "terminal.integrated.fontSize": 16,
+    "terminal.integrated.fontWeight": 500,
+    "terminal.integrated.fontFamily": "Fira Code,Cascadia Mono,MonacoB,Osaka Mono Bold, Consolas, 'Courier New', monospace",
+    "editor.tokenColorCustomizations": {
+        "[GitHub Dark][GitHub Dark Default][GitHub Dark Dimmed]": {
+            "numbers": "#6bd5ff",
+            "textMateRules": [
+                {
+                    "scope": "string",
+                    "settings": {
+                        "foreground": "#6a9fe4"
+                    }
+                },
+                {
+                    "scope": "constant.language",
+                    "settings": {
+                        "foreground": "#71b651"
+                    }
+                },
+                {
+                    "scope": "support.type.property-name.json",
+                    "settings": {
+                        "foreground": "#86cb6e"
+                    }
+                }
+            ]
+        },
+        "[GitHub Light Default]": {
+            "numbers": "#3b81eb",
+            "textMateRules": [
+                {
+                    "scope": "string",
+                    "settings": {
+                        "foreground": "#416ca5"
+                    }
+                },
+                {
+                    "scope": "constant.language",
+                    "settings": {
+                        "foreground": "#237e02"
+                    }
+                },
+                {
+                    "scope": "variable.parameter",
+                    "settings": {
+                        "fontStyle": "",
+                        "foreground": "#c2802a"
+                    }
+                },
+                {
+                    "scope": "support.type.property-name.json",
+                    "settings": {
+                        "foreground": "#1d6902"
+                    }
+                },
+                {
+                    // set the colour of the "class"
+                    "scope": "entity.name.type.class",
+                    "settings": {
+                        "foreground": "#843b2d"
+                    }
+                },
+                {
+                    // set the colour of module names
+                    "scope": "",
+                    "settings": {
+                        "foreground": "#b19792"
+                    }
+                }
+            ],
+        }
+    },
+    //"editor.rulers": [0],
+    "workbench.colorCustomizations": {
+        "editor.background": "#fffdfd",
+        "terminal.background": "#fbf5f3",
+        "terminal.foreground": "#000000",
+        "terminal.ansiYellow": "#ff8400",
+        "terminal.ansiBlack": "#584545",
+        "terminal.ansiBrightBlack": "#665C54",
+        "terminal.ansiBrightBlue": "#226db4",
+        "terminal.ansiBrightCyan": "#53966c",
+        "terminal.ansiBrightGreen": "#237e02",
+        "terminal.ansiBrightMagenta": "#bb197d",
+        "terminal.ansiBrightRed": "#ac1804",
+        "terminal.ansiBrightWhite": "#FDF4C1",
+        "terminal.ansiBrightYellow": "#b06100",
+        "terminal.ansiBlue": "#2987df",
+        "terminal.ansiCyan": "#8BA59B",
+        "terminal.ansiGreen": "#45b834",
+        "terminal.ansiMagenta": "#8F4673",
+        // set font colour of strings in editor to green:
+        "terminal.ansiRed": "#FB543F",
+        "terminal.ansiWhite": "#A89984",
+        "notebook.cellEditorBackground": "#eaeaea62",
+        "notebook.cellBorderColor": "#d1d1d1",
+        "editor.wordHighlightBackground": "#8abd922c",
+        "editor.lineHighlightBackground": "#ffffff00",
+        "[GitHub Dark]|[GitHub Dark Default]|[GitHub Dark Dimmed]": {
+            "terminal.foreground": "#bbbbbb", // main font a little whiter
+            "terminal.background": "#171717",
+            "notebook.cellEditorBackground": "#46464662",
+            "notebook.cellBorderColor": "#7a7a7a",
+            "editor.wordHighlightBackground": "#1dc03650",
+            "editor.lineHighlightBackground": "#44444459",
+            "notebook.outputContainerBackgroundColor": "#4e4e4e19",
+            "notebook.outputContainerBorderColor": "#7a7a7a30",
+            "editor.background": "#292c33"
+        },
+        "[One Dark Pro]": {
+            "notebook.cellEditorBackground": "#46464662",
+            "notebook.cellBorderColor": "#7a7a7a",
+            "editor.wordHighlightBackground": "#1dc03650",
+            "editor.lineHighlightBackground": "#44444459",
+            "notebook.outputContainerBackgroundColor": "#4e4e4e19",
+            "notebook.outputContainerBorderColor": "#7a7a7a30"
+        }
+        //"symbolIcon.functionForeground": "#1700FF",
+        //"functions": "#1700FF",
+        //"editorRuler.foreground": "#00000010"
+    },
+    "notebook.lineNumbers": "on",
+    "jupyter.askForKernelRestart": false,
+    "explorer.confirmDragAndDrop": false,
+    "python.analysis.extraPaths": [
+        "./sources"
+    ],
+    "python.analysis.autoSearchPaths": false,
+    "git.ignoreMissingGitWarning": true,
+    "editor.mouseWheelScrollSensitivity": 2,
+    "terminal.integrated.tabs.enabled": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.accessibilitySupport": "off",
+    "explorer.compactFolders": false,
+    "editor.fontFamily": "Fira Code,Cascadia Mono,MonacoB,Osaka Mono Bold, Consolas, 'Courier New', monospace",
+    "editor.fontWeight": 500,
+    "editor.fontSize": 15,
+    "tabnine.experimentalAutoImports": true,
+    "editor.inlineSuggest.enabled": true,
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": true,
+        "markdown": true,
+        "scminput": false,
+        "yaml": true
+    },
+    "editor.minimap.enabled": false,
+    "git.confirmSync": false,
+    "workbench.preferredDarkColorTheme": "GitHub Dark",
+    "workbench.preferredLightColorTheme": "GitHub Light Default",
+    "csv-preview.resizeColumns": "all",
+    "workbench.iconTheme": "material-icon-theme",
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "editor.fontLigatures": true,
+    "[json]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.indentSize": "tabSize",
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "window.autoDetectColorScheme": true,
+    "editor.indentSize": "tabSize",
+    "json.indent": "4",
+    "explorer.confirmDelete": false,
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "notebook.output.fontSize": 15,
+    "notebook.output.fontFamily": "Cascadia Mono,Osaka Mono, Consolas, 'Courier New', monospace",
+    "gitlens.gitCommands.skipConfirmations": [
+        "fetch:command",
+        "switch:command",
+        "stash-push:command"
+    ],
+    "gitlens.hovers.currentLine.over": "line",
+    "files.associations": {
+        "*.json": "jsonc"
+    },
+    "[sql]": {
+        "editor.defaultFormatter": "adpyke.vscode-sql-formatter"
+    },
+    "diffEditor.ignoreTrimWhitespace": false,
+    "workbench.editorAssociations": {
+        "*.hex": "hexEditor.hexedit"
+    },
+    "hexeditor.columnWidth": 16,
+    "hexeditor.showDecodedText": false,
+    "hexeditor.defaultEndianness": "little",
+    "hexeditor.inspectorType": "aside",
+    "remote.SSH.remotePlatform": {
+        "192.168.1.38": "linux"
+    },
+    "git.openRepositoryInParentFolders": "never",
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "terminal.integrated.defaultProfile.osx": "bash",
+    "terminalAllInOne.terminalTheme": "3024",
+    "[shellscript]": {
+        "editor.defaultFormatter": "foxundermoon.shell-format"
+    },
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "[dockerfile]": {
+        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    },
+    "git.enableSmartCommit": true,
+    "[css]": {
+        "editor.defaultFormatter": "vscode.css-language-features"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "workbench.colorTheme": "GitHub Light Default",
+    "[terraform]": {
+        "editor.defaultFormatter": "hashicorp.terraform"
+    },
+    "jdk.jdkhome": "/Users/artemiynosov/Java-JDK/Oracle_JDK-22.jdk/Contents/Home",
+    "github.copilot.editor.enableAutoCompletions": true,
+    //"terminal.integrated.fontFamily": "monaco",
+    //"editor.inlayHints.fontFamily": "monaco",
+    //"editor.codeLensFontFamily": "monaco"
+}
