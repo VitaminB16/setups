@@ -199,7 +199,6 @@
     "remote.SSH.remotePlatform": {
         "192.168.1.38": "linux"
     },
-    "git.openRepositoryInParentFolders": "never",
     "[javascript]": {
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
