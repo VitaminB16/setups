@@ -224,6 +224,23 @@
     },
     "jdk.jdkhome": "/Users/artemiynosov/Java-JDK/Oracle_JDK-22.jdk/Contents/Home",
     "github.copilot.editor.enableAutoCompletions": true,
+    "[markdown]": {
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    },
+    "[yaml]": {
+        "editor.autoIndent": "advanced",
+        "editor.formatOnSave": false,
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "never",
+            "source.organizeImports": "never"
+        }      
+    },
+    "[dockercompose]": {
+        "editor.autoIndent": "advanced"
+    },
+    "[github-actions-workflow]": {
+        "editor.autoIndent": "advanced"
+    },
     //"terminal.integrated.fontFamily": "monaco",
     //"editor.inlayHints.fontFamily": "monaco",
     //"editor.codeLensFontFamily": "monaco"
