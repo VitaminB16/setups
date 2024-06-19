@@ -1,9 +1,7 @@
 # SHORTCUTS
 alias pip='pip3'
 alias python='python3'
-
 alias c='printf "\033c"'
-
 alias l='gls -la --group-directories-first --color=auto'
 alias ls='gls -la --group-directories-first --color=auto'
 alias la='gls -la --group-directories-first --color=auto'
@@ -20,8 +18,18 @@ alias gps='git push'
 alias gr='git reset'
 alias grh='git reset --hard'
 
+alias ugac='unset GOOGLE_APPLICATION_CREDENTIALS'
 alias gal='gcloud auth login'
 alias gaal='gcloud auth application-default login'
+alias gaaal='ugac ; gal ; gaal'
+alias gaaaal='gaaal'
+alias gaaaaal='gaaal'
+alias gaaaaaal='gaaal'
+alias gaaaaaaal='gaaal'
+alias gaaaaaaaal='gaaal'
+alias gaaaaaaaaal='gaaal'
+alias gaaaaaaaaaal='gaaal'
+alias gaaaaaaaaaaal='gaaal'
 
 alias gcsp='gcloud config set project'
 alias gcps='gcloud config set project'
