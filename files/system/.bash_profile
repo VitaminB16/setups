@@ -1,4 +1,4 @@
-# SHORTCUTS
+### SHORTCUTS START ###
 alias pip='pip3'
 alias python='python3'
 alias c='printf "\033c"'
@@ -77,4 +77,4 @@ export PS1='\[\e[0;33m\]\u\[\e[0m\]@\[\e[0;32m\]\h\[\e[0m\]:\[\e[0;34m\]\w\[\e[0
 cp ~/.bash_profile ~/.bashrc
 cp ~/.bash_profile ~/.zshrc
 cp ~/.bash_profile ~/.zprofile
-
+### SHORTCUTS END ###
