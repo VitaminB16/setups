@@ -62,6 +62,7 @@ alias cpgs='gcloud config set project'
 alias po='poetry shell ; poetry install'
 
 alias p='python main.py'
+alias m='make'
 
 alias poetry-clear='poetry cache clear --all .'
 alias pclr='poetry cache clear --all .'
