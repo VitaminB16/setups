@@ -131,6 +131,7 @@
     "python.analysis.extraPaths": [
         "./sources"
     ],
+    "python.defaultInterpreterPath": "/Users/artemiynosov/opt/anaconda3/bin/python",
     "python.analysis.autoSearchPaths": false,
     "git.ignoreMissingGitWarning": true,
     "editor.mouseWheelScrollSensitivity": 2,
