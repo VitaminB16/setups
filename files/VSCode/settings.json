@@ -131,11 +131,9 @@
     "python.analysis.extraPaths": [
         "./sources"
     ],
-    "python.defaultInterpreterPath": "/Users/artemiynosov/opt/anaconda3/bin/python",
     "python.analysis.autoSearchPaths": false,
     "git.ignoreMissingGitWarning": true,
     "editor.mouseWheelScrollSensitivity": 2,
-    "terminal.integrated.tabs.enabled": false,
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.accessibilitySupport": "off",
     "explorer.compactFolders": false,
@@ -242,6 +240,7 @@
     "[github-actions-workflow]": {
         "editor.autoIndent": "advanced"
     },
+    "terminal.integrated.tabs.enabled": false,
     //"terminal.integrated.fontFamily": "monaco",
     //"editor.inlayHints.fontFamily": "monaco",
     //"editor.codeLensFontFamily": "monaco"
