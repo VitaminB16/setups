@@ -14,9 +14,11 @@ alias lpg='git pull'
 alias lgp='git pull'
 
 alias gps='git push'
+alias gcm='git checkout master'
 
 alias gr='git reset'
 alias grh='git reset --hard'
+alias gg='gcm ; gpl ; c'
 
 alias ugac='unset GOOGLE_APPLICATION_CREDENTIALS'
 alias gal='gcloud auth login'
