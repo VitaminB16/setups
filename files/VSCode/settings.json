@@ -78,7 +78,7 @@
     },
     //"editor.rulers": [0],
     "workbench.colorCustomizations": {
-        "editor.background": "#fffdfd",
+        "editor.background": "#fffbfb",
         "terminal.background": "#fbf5f3",
         "terminal.foreground": "#000000",
         "terminal.ansiYellow": "#ff8400",
@@ -173,8 +173,9 @@
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
-    "notebook.output.fontSize": 15,
-    "notebook.output.fontFamily": "Cascadia Mono,Osaka Mono, Consolas, 'Courier New', monospace",
+    "notebook.output.fontSize": 16,
+    "notebook.output.fontFamily": "Fira Code,Cascadia Mono,MonacoB,Osaka Mono Bold, Consolas, 'Courier New', monospace",
+    "notebook.output.fontWeight": 600,
     "gitlens.gitCommands.skipConfirmations": [
         "fetch:command",
         "switch:command",
@@ -241,6 +242,14 @@
         "editor.autoIndent": "advanced"
     },
     "terminal.integrated.tabs.enabled": false,
+    "makefile.configureOnOpen": false,
+    "[rmd]": {
+        "editor.defaultFormatter": "REditorSupport.r"
+    },
+    "sqltools.useNodeRuntime": true,
+    "sqltools.connections": [],
+    "sqltools.highlightQuery": false,
+    "explorer.confirmPasteNative": false,
     //"terminal.integrated.fontFamily": "monaco",
     //"editor.inlayHints.fontFamily": "monaco",
     //"editor.codeLensFontFamily": "monaco"
