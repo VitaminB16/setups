@@ -19,6 +19,7 @@ alias gcm='git checkout master'
 alias gr='git reset'
 alias grh='git reset --hard'
 alias gg='gcm ; gpl ; c'
+alias gplc='git pull; c'
 
 alias drs='dbt run -s'
 alias dsr='dbt run -s'
