@@ -15,6 +15,7 @@ alias lgp='git pull'
 
 alias gps='git push'
 alias gcm='git checkout master'
+alias gc='git checkout'
 
 alias gr='git reset'
 alias grh='git reset --hard'
@@ -123,6 +124,18 @@ function past_commit() {
 function docker_run() {
     docker run --entrypoint /bin/bash -it $1
 }
+function docker_run_gar() {
+    # First argument is the full GAR image URI, e.g.
+    # europe-west2-docker.pkg.dev/feefo-v4-cloud-build/docker/data-platform-ds-to-bq/main:da25232
+    local image_uri="$1"
+
+    # (Optional) Pull the image explicitly. Docker run will also pull if not present.
+    docker pull "$image_uri"
+
+    # Run the container with a bash entrypoint interactively
+    docker run --entrypoint /bin/bash -it "$image_uri"
+}
+
 
 
 # Copy the .bash_profile file to .bashrc, .zhrc and .zprofile
