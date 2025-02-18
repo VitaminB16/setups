@@ -117,6 +117,20 @@ alias sl='sqlfluff lint'
 export TERM="xterm-color" 
 export PS1='\[\e[0;33m\]\u\[\e[0m\]@\[\e[0;32m\]\h\[\e[0m\]:\[\e[0;34m\]\w\[\e[0m\]\$ '
 
+alias mem="ps -caxm -orss= | awk '{ sum += \$1 } END { print sum/1024 \" MiB\" }'"
+mem_watch() {
+  c
+  while true; do
+    # Capture the memory usage output from the 'mem' alias
+    output=$(mem)
+    # Move the cursor to the beginning of the line, clear it, and print the new output
+    printf "\r\033[K%s" "$output"
+    sleep 0.5
+  done
+  # Optionally, print a newline on exit
+  echo
+}
+
 function past_commit() {
     export THE_TIME=$1
     GIT_AUTHOR_DATE=$THE_TIME GIT_COMMITTER_DATE=$THE_TIME git commit -m "$2"
@@ -124,6 +138,12 @@ function past_commit() {
 function docker_run() {
     docker run --entrypoint /bin/bash -it $1
 }
+function get_mid() {
+    /Users/artemiynosov/GitHub/scripts/get_merchant_id/get_merchant_id $1
+}
+# Example function name: docker_run_gar
+# Usage: docker_run_gar europe-west2-docker.pkg.dev/feefo-v4-cloud-build/docker/data-platform-ds-to-bq/main:da25232
+
 function docker_run_gar() {
     # First argument is the full GAR image URI, e.g.
     # europe-west2-docker.pkg.dev/feefo-v4-cloud-build/docker/data-platform-ds-to-bq/main:da25232

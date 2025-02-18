@@ -6,6 +6,9 @@
     "synthwave84.brightness": 1,
     "terminal.integrated.fontSize": 16,
     "terminal.integrated.fontWeight": 500,
+    "editor.fontFamily": "Fira Code,Cascadia Mono,MonacoB,Osaka Mono Bold, Consolas, 'Courier New', monospace",
+    "editor.fontWeight": 500,
+    "editor.fontSize": 15,
     "terminal.integrated.fontFamily": "Fira Code,Cascadia Mono,MonacoB,Osaka Mono Bold, Consolas, 'Courier New', monospace",
     "editor.tokenColorCustomizations": {
         "[GitHub Dark][GitHub Dark Default][GitHub Dark Dimmed]": {
@@ -137,9 +140,6 @@
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.accessibilitySupport": "off",
     "explorer.compactFolders": false,
-    "editor.fontFamily": "Fira Code,Cascadia Mono,MonacoB,Osaka Mono Bold, Consolas, 'Courier New', monospace",
-    "editor.fontWeight": 500,
-    "editor.fontSize": 15,
     "tabnine.experimentalAutoImports": true,
     "editor.inlineSuggest.enabled": true,
     "editor.defaultFormatter": "ms-python.black-formatter",
@@ -250,6 +250,16 @@
     "sqltools.connections": [],
     "sqltools.highlightQuery": false,
     "explorer.confirmPasteNative": false,
+    "settingsSync.ignoredSettings": [
+        "terminal.integrated.fontWeight",
+        "terminal.integrated.fontWeightBold",
+        "chat.editor.fontWeight",
+        "gitlens.currentLine.fontWeight",
+        "gitlens.blame.fontWeight",
+        "editor.fontWeight",
+        "editor.fontVariations",
+        "workbench.colorTheme"
+    ],
     //"terminal.integrated.fontFamily": "monaco",
     //"editor.inlayHints.fontFamily": "monaco",
     //"editor.codeLensFontFamily": "monaco"
