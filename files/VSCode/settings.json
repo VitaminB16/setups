@@ -260,6 +260,7 @@
         "editor.fontVariations",
         "workbench.colorTheme"
     ],
+    "markdown-preview-enhanced.alwaysShowBacklinksInPreview": false,
     //"terminal.integrated.fontFamily": "monaco",
     //"editor.inlayHints.fontFamily": "monaco",
     //"editor.codeLensFontFamily": "monaco"

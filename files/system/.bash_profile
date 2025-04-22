@@ -102,7 +102,8 @@ alias cpsg='gcloud config set project'
 alias cpgs='gcloud config set project'
 
 alias po='poetry shell ; poetry install'
-
+alias de='deactivate'
+alias py='python'
 alias p='python main.py'
 
 alias poetry-clear='poetry cache clear --all .'
@@ -115,9 +116,51 @@ alias sf='sqlfluff fix'
 alias sl='sqlfluff lint'
 
 export TERM="xterm-color" 
-export PS1='\[\e[0;33m\]\u\[\e[0m\]@\[\e[0;32m\]\h\[\e[0m\]:\[\e[0;34m\]\w\[\e[0m\]\$ '
+export VIRTUAL_ENV_DISABLE_PROMPT=1
 
-alias mem="ps -caxm -orss= | awk '{ sum += \$1 } END { print sum/1024 \" MiB\" }'"
+mypwd() {
+  # Start with the current directory (PWD)
+  # Replace $HOME with ~
+  local shown_path="${PWD/#$HOME}"
+
+  # If there's "/GitHub" in there, remove it (including the leading slash)
+  shown_path="${shown_path/\/GitHub/}"
+
+  # Output the final path
+  echo "$shown_path"
+}
+shortenv() {
+  if [ -n "$VIRTUAL_ENV" ]; then
+    # Example: $VIRTUAL_ENV = /Users/<user>/GitHub/data-platform/dbt/.venv
+    # Grab the final path component, e.g. ".venv"
+    local venv_dir
+    venv_dir="$(basename "$VIRTUAL_ENV")"
+
+    # Grab the parent folder's name, e.g. "dbt"
+    local parent_dir
+    parent_dir="$(basename "$(dirname "$VIRTUAL_ENV")")"
+
+    # Combine them, e.g. "dbt/.venv"
+    local env_display="${parent_dir}"
+
+    # (Optionally) Truncate to first 20 characters, if you want to limit length
+    # if [ ${#env_display} -gt 20 ]; then
+    #   env_display="${env_display:0:20}"
+    # fi
+
+
+    if [ -n "$POETRY_ACTIVE" ]; then
+      # Show parentheses if Poetry is truly active
+      echo "(${env_display}) "
+    else
+      # Otherwise, just show the name (no parentheses)
+      echo "${env_display} "
+    fi
+  fi
+}
+export PS1='$(shortenv)\[\e[0;33m\]a\[\e[0m\]@\[\e[0;32m\]A\[\e[0m\]:\[\e[0;34m\]$(mypwd)\[\e[0m\]\$ '
+
+alias mem="ps -caxm -orss= | awk '{ sum += \$1 } END { print int(sum/1024) \" MiB\" }'"
 mem_watch() {
   c
   while true; do
@@ -125,7 +168,7 @@ mem_watch() {
     output=$(mem)
     # Move the cursor to the beginning of the line, clear it, and print the new output
     printf "\r\033[K%s" "$output"
-    sleep 0.5
+    sleep 0.1
   done
   # Optionally, print a newline on exit
   echo
@@ -141,9 +184,9 @@ function docker_run() {
 function get_mid() {
     /Users/artemiynosov/GitHub/scripts/get_merchant_id/get_merchant_id $1
 }
+
 # Example function name: docker_run_gar
 # Usage: docker_run_gar europe-west2-docker.pkg.dev/feefo-v4-cloud-build/docker/data-platform-ds-to-bq/main:da25232
-
 function docker_run_gar() {
     # First argument is the full GAR image URI, e.g.
     # europe-west2-docker.pkg.dev/feefo-v4-cloud-build/docker/data-platform-ds-to-bq/main:da25232
@@ -155,6 +198,7 @@ function docker_run_gar() {
     # Run the container with a bash entrypoint interactively
     docker run --entrypoint /bin/bash -it "$image_uri"
 }
+
 
 
 
