@@ -131,23 +131,40 @@ mypwd() {
 }
 shortenv() {
   if [ -n "$VIRTUAL_ENV" ]; then
-    # Example: $VIRTUAL_ENV = /Users/<user>/GitHub/data-platform/dbt/.venv
-    # Grab the final path component, e.g. ".venv"
-    local venv_dir
-    venv_dir="$(basename "$VIRTUAL_ENV")"
+    local env_display
 
-    # Grab the parent folder's name, e.g. "dbt"
-    local parent_dir
-    parent_dir="$(basename "$(dirname "$VIRTUAL_ENV")")"
+    # Check if the virtual environment is a local .venv directory
+    if [[ "$VIRTUAL_ENV" == *.venv ]]; then
+      # OLD STYLE: /path/to/project/.venv
+      # Grab the final path component, e.g. ".venv"
+      local venv_dir
+      venv_dir="$(basename "$VIRTUAL_ENV")"
 
-    # Combine them, e.g. "dbt/.venv"
-    local env_display="${parent_dir}"
+      # Grab the parent folder's name, e.g. "dbt"
+      local parent_dir
+      parent_dir="$(basename "$(dirname "$VIRTUAL_ENV")")"
 
-    # (Optionally) Truncate to first 20 characters, if you want to limit length
+      # Combine them, e.g. "dbt/.venv"
+      env_display="${parent_dir}/${venv_dir}"
+    else
+      # NEW STYLE: .../virtualenvs/project-name-random_hash-py3.12
+      local venv_name
+      venv_name="$(basename "$VIRTUAL_ENV")"
+
+      # Extract the project name by removing the last two hyphen-separated parts.
+      # For example, "repository-h_g19u3R-py3.12" becomes "repository".
+      if [[ "$venv_name" =~ ^(.*)-[^-]+-[^-]+$ ]]; then
+          env_display="${BASH_REMATCH[1]}"
+      else
+          # Fallback to the full name if the new pattern doesn't match
+          env_display="$venv_name"
+      fi
+    fi
+
+    # (Optional) Truncate to first 20 characters, if you want to limit length
     # if [ ${#env_display} -gt 20 ]; then
     #   env_display="${env_display:0:20}"
     # fi
-
 
     if [ -n "$POETRY_ACTIVE" ]; then
       # Show parentheses if Poetry is truly active
